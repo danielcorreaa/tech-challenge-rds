@@ -24,4 +24,4 @@ jobs:
         aws-region: us-east-1
 
       
-    - run: terraform -chdir= /env/dev init
+    - run: terraform -chdir=../../env/dev init
