@@ -25,3 +25,8 @@ jobs:
 
       
     - run: terraform -chdir=env/develop init
+    - run: terraform -chdir=env/develop apply -auto-approve
+    
+    - run: echo "$(terraform -chdir=infra output -raw url-database)"
+
+    - run: terraform -chdir=env/develop destroy -auto-approve
